@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style4.css">
+</head>
+<body>
+
+
+
+
+
+    <div class="form-container">
+        <div class="form-content">
+            <form method="POST">
+                <h1>Login</h1>
+                <input type="text" placeholder="Email" required class="reg" name="email">
+                <input type="password" placeholder="Password" required class="reg" name="password">
+                <div class="forgot">
+                    <a href="#">Forgot your password?</a>
+                </div>
+                <center>
+                    <input type="submit" value="LOG IN" class="btn-form">
+                </center>
+                <div class="signup">
+                    <p>Not a member? <a href="signup.php">Signup now!</a></p>
+                </div>
+            </form>
+            <div class="txt_field">
+                <p>
+                    Welcome to Online Shopping Delivery. Access your account effortlessly with our secure and user-friendly login. Stay connected to your personalized shopping experience, track your orders, manage your preferences, and enjoy exclusive member benefits. Logging in is quick and hassle-free, ensuring you have everything you need at your fingertips to make your shopping journey seamless and enjoyable.
+
+
+
+
+
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Handle form submission
+document.querySelector('.btn-form').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Retrieve entered email and password
+    const email = document.querySelector('input[name="email"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+
+    // Get users from localStorage
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if the user exists and credentials are correct
+    const user = users.find(user => user.email === email && user.password === password);
+
+    if (user) {
+        // Redirect to home.html if credentials match
+        alert('Login successful! Redirecting to home...');
+        window.location.href = 'home.html';
+    } else {
+        // Display an error if credentials are incorrect
+        alert('Email or password is incorrect.');
+    }
+});
+
+    </script>
+</body>
+</html>

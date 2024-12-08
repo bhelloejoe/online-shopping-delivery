@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style6.css">
+</head>
+<body>
+<!-- Navbar -->
+    <header class="navbar">
+        <ul class="nav-link product-nav-link">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="product.html">Products</a></li>
+
+            
+
+            <!-- Responsive Menu Button -->
+            <div class="menu-btn">
+                <i class="fa fa-bars" aria-label="Menu"></i>
+            </div>
+            <a href="signup.html">
+                <button class="btn-logout product-btn-logout">Signup</button>
+            </a>
+        </ul>
+    </header>
+    <!-- End of Navbar -->
+
+     <!--Product start-->
+
+    <section class="product">
+        <h1 class="pheading">Our Latest Products</h1>
+        <div class="product-content">
+            <div class="products">
+                <div class="img">
+                    <img src="css/product.jpg" alt="">
+                </div>
+                <div class="desc">Korean Plain Top Shirt</div>
+                <div class="title">Croptop</div>
+                <div class="box">
+                    <div class="price">P434</div>
+                    <button class="btn" onclick="showBookingForm('Korean Plain Top Shirt', 'Croptop')">Buy Now</button>
+                </div>
+            </div>
+            <div class="products">
+                <div class="img">
+                    <img src="css/product2.jpg" alt="">
+                </div>
+                <div class="desc">Kiomo Basic Crop Top</div>
+                <div class="title">Croptop</div>
+                <div class="box">
+                    <div class="price">P150</div>
+                    <button class="btn" onclick="showBookingForm('Kiomo Basic Crop Top', 'Croptop')">Buy Now</button>
+                </div>
+            </div>
+            <div class="products">
+                <div class="img">
+                    <img src="css/product3.jpg" alt="">
+                </div>
+                <div class="desc">VAMPIRE 6A0276 Casual Longsleeves</div>
+                <div class="title">Semi Croptop</div>
+                <div class="box">
+                    <div class="price">P190</div>
+                    <button class="btn" onclick="showBookingForm('VAMPIRE 6A0276 Casual Longsleeves', 'Semi Croptop')">Buy Now</button>
+                </div>
+            </div>
+            <div class="products">
+                <div class="img">
+                    <img src="css/product4.jpg" alt="">
+                </div>
+                <div class="desc">Korean Top Short Round Neck Long Sleeve</div>
+                <div class="title">Knitted Croptop</div>
+                <div class="box">
+                    <div class="price">P141</div>
+                    <button class="btn" onclick="showBookingForm('Korean Top Short Round Neck Long Sleeve', 'Knitted Croptop')">Buy Now</button>
+                </div>
+            </div>
+            <div class="products">
+                <div class="img">
+                    <img src="css/product5.jpg" alt="">
+                </div>
+                <div class="desc">Korean Trendy tops fashion stretchable tops</div>
+                <div class="title">Knitted Croptop</div>
+                <div class="box">
+                    <div class="price">P520</div>
+                    <button class="btn" onclick="showBookingForm('Korean Trendy tops fashion stretchable tops', 'Knitted Croptop')">Buy Now</button>
+                </div>
+            </div>
+            <div class="products">
+                <div class="img">
+                    <img src="css/product6.jpg" alt="">
+                </div>
+                <div class="desc">Lovito Women's T-Shirt Pink</div>
+                <div class="title">T-Shirt</div>
+                <div class="box">
+                    <div class="price">P228</div>
+                    <button class="btn" onclick="showBookingForm('Lovito Women\'s T-Shirt Pink', 'T-Shirt')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        
+
+
+<div class="product_services_form">
+    <div class="product_services_form_container">
+        <form method="post" style="display:none">
+            <div class="close">
+                <button type="button" onclick="CLOSE()">X</button>
+            </div>
+            <div class="product_tittle">
+                <h1>Korean Plain Top Shirt</h1>
+                <h4 style="text-align: center; font-size:20px; margin-top:-20px">Croptop</h4>
+                <input type="hidden" id="product" name="product" value="">
+                <input type="hidden" id="product_desc" name="product_desc" value="">
+            </div>
+            <div class="fullname">
+                <div class="txt_field">
+                    <input name="lname" type="text" required>
+                    <span></span>
+                    <label>Last Name</label>
+                </div>
+                <div class="txt_field">
+                    <input name="fname" type="text" required>
+                    <span></span>
+                    <label>First Name</label>
+                </div>
+                <div class="txt_field">
+                    <input name="mname" type="text" required>
+                    <span></span>
+                    <label>Middle Name</label>
+                </div>
+            </div>
+            <div class="form_contact_info">
+                <div class="txt_field2">
+                    <input name="address" type="text" required>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span></span>
+                    <label>Address</label>
+                </div>
+                <div class="txt_field2">
+                    <input name="email" type="email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span></span>
+                    <label>Email Address</label>
+                </div>
+                <div class="txt_field2">
+                    <input name="number" type="text" required>
+                    <i class="fa-solid fa-phone"></i>
+                    <span></span>
+                    <label>Contact No.</label>
+            </div>
+            <input type="submit" value="Submit" class="form_btn">
+        </form>
+    </div>
+</div>
+
+
+
+
+
+    </section>
+    <!--Product ends-->
+
+
+    <script>
+
+        // Close the form
+function CLOSE() {
+    const formContainer = document.querySelector('.product_services_form_container form');
+    const container = document.querySelector('.container');
+    formContainer.style.display = 'none';
+    container?.classList.remove('blurry-background');
+}
+
+// Show the booking form
+function showBookingForm(title, packageTitle) {
+    const formContainer = document.querySelector('.product_services_form_container form');
+    const productTitle = document.querySelector('.product_tittle h1');
+    const productPackage = document.querySelector('.product_tittle h4');
+
+    // Update the visible form labels
+    productTitle.innerText = title;
+    productPackage.innerText = packageTitle;
+
+    // Update hidden input fields
+    document.getElementById('product').value = title;
+    document.getElementById('product_desc').value = packageTitle;
+
+    // Display the form
+    formContainer.style.display = 'block';
+}
+
+// Handle form submission
+document.querySelector('.form_btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Retrieve form values
+    const lastName = document.querySelector('input[name="lname"]').value;
+    const firstName = document.querySelector('input[name="fname"]').value;
+    const middleName = document.querySelector('input[name="mname"]').value;
+    const address = document.querySelector('input[name="address"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const contactNumber = document.querySelector('input[name="number"]').value;
+    const product = document.getElementById('product').value;
+    const productDesc = document.getElementById('product_desc').value;
+
+    // Create order object
+    const order = {
+        product: product,
+        productDesc: productDesc,
+        lastName: lastName,
+        firstName: firstName,
+        middleName: middleName,
+        address: address,
+        email: email,
+        contactNumber: contactNumber,
+    };
+
+    // Get existing orders from localStorage
+    const existingOrders = JSON.parse(localStorage.getItem('orders')) || [];
+
+    // Add new order to the array
+    existingOrders.push(order);
+
+    // Save updated array back to localStorage
+    localStorage.setItem('orders', JSON.stringify(existingOrders));
+
+    // Notify user and clear form
+    alert('Your order has been saved!');
+    document.querySelector('.product_services_form_container form').reset();
+
+    // Close the form
+    CLOSE();
+});
+
+
+    </script>
+
+</body>
+</html>
